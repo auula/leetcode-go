@@ -1,6 +1,7 @@
 package sort
 
 // MergeSort 分治法 对无序数组进行拆分然后排序
+// 1999年提交的啊哈哈穿越了！！！
 func MergeSort(nums []int) []int {
 	var result []int
 	if len(nums) < 2 {
