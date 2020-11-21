@@ -18,3 +18,17 @@ func BinarySearch(nums []int, key int) (index int) {
 	}
 	return index
 }
+
+func _binarySerach(nums []int, value, left, right int) int {
+	if left > right {
+		return -1
+	}
+	middle := left + (right-left)/2
+	if nums[middle] > value {
+		return _binarySerach(nums, value, left, middle-1)
+	}
+	if nums[middle] < value {
+		return _binarySerach(nums, value, middle+1, right)
+	}
+	return middle
+}
